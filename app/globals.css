@@ -67,43 +67,6 @@ body {
   filter: blur(14px);
 }
 
-.world-image-atlantis {
-  background-image: url("/worlds/atlantis-world-01.webp");
-  background-position: center;
-  background-size: cover;
-}
-
-.world-gradient-cyan {
-  background:
-    radial-gradient(circle at 30% 30%, rgba(78, 235, 255, .7), transparent 28%),
-    linear-gradient(135deg, #0a2230, #07131b 48%, #03090d);
-}
-.world-gradient-violet {
-  background:
-    radial-gradient(circle at 68% 28%, rgba(184, 79, 255, .7), transparent 28%),
-    linear-gradient(135deg, #1a0b2a, #0e0918 52%, #050509);
-}
-.world-gradient-red {
-  background:
-    radial-gradient(circle at 50% 25%, rgba(255, 58, 91, .55), transparent 25%),
-    linear-gradient(135deg, #26070c, #120608 50%, #050505);
-}
-.world-gradient-orange {
-  background:
-    radial-gradient(circle at 65% 35%, rgba(255, 123, 48, .62), transparent 30%),
-    linear-gradient(135deg, #2b1006, #160b07 50%, #050505);
-}
-
-.world-orbit {
-  position: absolute;
-  width: 62%;
-  aspect-ratio: 1;
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  border-radius: 999px;
-  transform: rotate(-18deg);
-  box-shadow: 0 0 90px rgba(255,255,255,.05);
-}
-
 .signal-card {
   position: absolute;
   inset: 0;
