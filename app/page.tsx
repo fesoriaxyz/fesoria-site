@@ -32,7 +32,7 @@ const worlds = [
       "Humanity celebrates beneath a crimson sky, with Earth rising behind the stage.",
     accent: "orange",
   },
-];
+] as const;
 
 export default function Home() {
   return (
