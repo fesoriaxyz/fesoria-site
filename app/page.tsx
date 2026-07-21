@@ -34,6 +34,41 @@ const worlds = [
   },
 ] as const;
 
+const signals = [
+  {
+    code: "ATL-001",
+    title: "World 01 — Atlantis",
+    status: "Transmission live",
+    video: "/videos/atlantis-world-01.mp4",
+    poster: "/posters/atlantis-world-01.webp",
+  },
+  {
+    code: "TKY-2147",
+    title: "Incoming footage",
+    status: "Transmission pending",
+  },
+  {
+    code: "DRC-013",
+    title: "Incoming footage",
+    status: "Transmission pending",
+  },
+  {
+    code: "MRS-001",
+    title: "Incoming footage",
+    status: "Transmission pending",
+  },
+  {
+    code: "EGY-404",
+    title: "Incoming footage",
+    status: "Transmission pending",
+  },
+  {
+    code: "VKG-009",
+    title: "Incoming footage",
+    status: "Transmission pending",
+  },
+] as const;
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
@@ -90,26 +125,46 @@ export default function Home() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {["ATL-001", "TKY-2147", "DRC-013", "MRS-001", "EGY-404", "VKG-009"].map(
-              (code, index) => (
-                <article
-                  key={code}
-                  className="group relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0d0d12]"
-                >
-                  <div className={`signal-card signal-${index + 1}`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-6">
-                    <p className="text-xs tracking-[0.28em] text-white/45">
-                      {code}
-                    </p>
-                    <h3 className="mt-2 text-xl font-medium">Incoming footage</h3>
-                    <p className="mt-2 text-sm text-white/55">
-                      Transmission pending.
-                    </p>
-                  </div>
-                </article>
-              ),
-            )}
+            {signals.map((signal, index) => (
+              <article
+                key={signal.code}
+                className="group relative aspect-[9/16] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0d0d12]"
+              >
+                  {"video" in signal ? (
+                    <>
+                      <video
+                        className="h-full w-full object-cover"
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster={signal.poster}
+                        aria-label="Watch World 01 — Atlantis"
+                      >
+                        <source src={signal.video} type="video/mp4" />
+                        Your browser does not support the video element.
+                      </video>
+                      <div className="pointer-events-none absolute left-5 top-5 flex items-center gap-2 rounded-full border border-cyan-300/20 bg-black/55 px-4 py-2 text-[0.65rem] font-medium uppercase tracking-[0.22em] text-cyan-100 backdrop-blur-md">
+                        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300" />
+                        {signal.status}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className={`signal-card signal-${index + 1}`} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 p-6">
+                        <p className="text-xs tracking-[0.28em] text-white/45">
+                          {signal.code}
+                        </p>
+                        <h3 className="mt-2 text-xl font-medium">{signal.title}</h3>
+                        <p className="mt-2 text-sm text-white/55">
+                          {signal.status}.
+                        </p>
+                      </div>
+                    </>
+                  )}
+              </article>
+            ))}
           </div>
         </div>
       </section>
