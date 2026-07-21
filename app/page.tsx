@@ -9,28 +9,28 @@ const worlds = [
     era: "Lost beneath the surface",
     description:
       "A submerged civilization awakens for one impossible night of light, sound and ancient energy.",
-    accent: "cyan",
+    image: "/worlds/atlantis.webp",
   },
   {
     title: "Tokyo 2147",
     era: "The city never sleeps",
     description:
       "Holographic towers, neon rain and a festival transmitted across a billion augmented skies.",
-    accent: "violet",
+    image: "/worlds/tokyo-2147.webp",
   },
   {
     title: "Dracula",
     era: "Midnight in Transylvania",
     description:
       "A gothic ritual of bass, fire and moonlight inside a castle forgotten by time.",
-    accent: "red",
+    image: "/worlds/dracula-festival.webp",
   },
   {
     title: "Mars",
     era: "The first off-world mainstage",
     description:
       "Humanity celebrates beneath a crimson sky, with Earth rising behind the stage.",
-    accent: "orange",
+    image: "/worlds/mars-mainstage.webp",
   },
 ] as const;
 
