@@ -20,7 +20,7 @@ export default function WorldCard({
   return (
     <article className="group relative min-h-[34rem] overflow-hidden rounded-[2rem] border border-white/10 bg-[#0b0b0d]">
       <div
-        className={`absolute inset-0 world-gradient-${accent} transition duration-700 group-hover:scale-[1.04]`}
+        className={`absolute inset-0 ${index === 0 ? "world-image-atlantis" : `world-gradient-${accent}`} transition duration-700 group-hover:scale-[1.04]`}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent" />
       <div className="world-orbit right-[-12%] top-[4%] transition duration-700 group-hover:rotate-0 group-hover:scale-110" />

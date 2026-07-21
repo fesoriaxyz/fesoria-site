@@ -67,6 +67,12 @@ body {
   filter: blur(14px);
 }
 
+.world-image-atlantis {
+  background-image: url("/worlds/atlantis-world-01.webp");
+  background-position: center;
+  background-size: cover;
+}
+
 .world-gradient-cyan {
   background:
     radial-gradient(circle at 30% 30%, rgba(78, 235, 255, .7), transparent 28%),
