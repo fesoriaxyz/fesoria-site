@@ -1,51 +1,66 @@
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Play } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 pt-24 text-center">
-      <div className="absolute inset-0 grid-noise" />
-      <div className="absolute inset-0 hero-glow animate-pulse-soft" />
-      <div className="absolute left-1/2 top-[46%] h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 shadow-[0_0_160px_rgba(110,79,255,.16)]" />
-      <div className="absolute left-1/2 top-[46%] h-[27rem] w-[27rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.07]" />
+    <section className="hero-shell relative flex min-h-[100svh] items-end overflow-hidden px-5 pb-16 pt-32 sm:px-8 sm:pb-20 lg:px-12">
+      <video
+        className="hero-film"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/posters/atlantis-world-01.webp"
+        aria-hidden="true"
+      >
+        <source src="/videos/atlantis-world-01-fixed.mp4" type="video/mp4" />
+      </video>
+      <div className="hero-shade" />
+      <div className="absolute inset-0 grid-noise opacity-50" />
 
-      <div className="relative z-10 mx-auto max-w-6xl">
-        <p className="mb-6 text-xs font-medium uppercase tracking-[0.34em] text-white/45 sm:text-sm">
-          AI-generated festival universes
-        </p>
+      <div className="relative z-10 mx-auto w-full max-w-[92rem]">
+        <div className="hero-kicker mb-7 flex items-center gap-3 text-[0.66rem] font-medium uppercase tracking-[0.28em] text-white/60">
+          <span className="live-dot" />
+          Signal 001 · Atlantis online
+        </div>
 
-        <h1 className="text-[18vw] font-medium leading-[0.78] tracking-[-0.075em] sm:text-[9.5rem] lg:text-[12rem]">
-          FESORIA
+        <h1 className="max-w-[1050px] text-[clamp(4.25rem,12.5vw,11rem)] font-medium leading-[0.76] tracking-[-0.078em]">
+          Worlds worth
+          <span className="block text-white/48">losing yourself in.</span>
         </h1>
 
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-white/65 sm:text-2xl">
-          Every world has a festival.
-        </p>
+        <div className="mt-9 flex max-w-4xl flex-col justify-between gap-8 border-t border-white/20 pt-7 md:flex-row md:items-end">
+          <p className="max-w-xl text-lg leading-8 text-white/72 sm:text-xl">
+            Impossible festivals, cinematic transmissions and the people who
+            inhabit them. Welcome to FESORIA.
+          </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-wrap gap-3">
           <a
             href="#worlds"
-            className="group flex items-center gap-2 rounded-full bg-white px-7 py-4 font-medium text-black transition hover:scale-[1.03]"
+              className="button-primary group flex items-center gap-2"
           >
-            Enter FESORIA
+              Explore the worlds
             <ArrowUpRight
               size={18}
               className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
           </a>
-
           <a
-            href="#about"
-            className="rounded-full border border-white/15 px-7 py-4 text-white/70 transition hover:border-white/35 hover:text-white"
+              href="#transmissions"
+              className="button-ghost flex items-center gap-2"
           >
-            Discover the signal
+              <Play size={15} fill="currentColor" />
+              Watch signal
           </a>
+          </div>
         </div>
       </div>
 
       <a
         href="#worlds"
         aria-label="Scroll to worlds"
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white/40"
+        className="absolute bottom-7 right-7 z-10 hidden animate-bounce text-white/45 sm:block lg:right-12"
       >
         <ArrowDown size={22} />
       </a>

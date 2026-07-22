@@ -8,12 +8,12 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="px-5 pb-8 pt-24 sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] p-7 sm:p-10">
+    <footer className="px-5 pb-8 pt-28 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[92rem] overflow-hidden border-t border-white/15 py-10">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <p className="text-sm tracking-[0.32em]">FESORIA</p>
-            <h2 className="mt-6 max-w-xl text-4xl font-medium tracking-[-0.045em] sm:text-6xl">
+            <h2 className="mt-6 max-w-2xl text-4xl font-medium tracking-[-0.055em] sm:text-7xl">
               The next world is already transmitting.
             </h2>
           </div>

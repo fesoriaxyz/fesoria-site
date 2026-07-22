@@ -1,6 +1,8 @@
+import { ArrowUpRight, Play } from "lucide-react";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Reveal from "@/components/Reveal";
 import WorldCard from "@/components/WorldCard";
 
 const worlds = [
@@ -8,165 +10,200 @@ const worlds = [
     title: "Atlantis",
     era: "Lost beneath the surface",
     description:
-      "A submerged civilization awakens for one impossible night of light, sound and ancient energy.",
+      "Ancient architecture. Bioluminescent crowds. A civilization returning for one impossible night.",
     image: "/worlds/atlantis.webp",
   },
   {
     title: "Tokyo 2147",
-    era: "The city never sleeps",
+    era: "The future has no curfew",
     description:
-      "Holographic towers, neon rain and a festival transmitted across a billion augmented skies.",
+      "Neon rain falls over a city where every rooftop, transit line and augmented sky becomes a stage.",
     image: "/worlds/tokyo-2147.webp",
   },
   {
     title: "Dracula",
     era: "Midnight in Transylvania",
     description:
-      "A gothic ritual of bass, fire and moonlight inside a castle forgotten by time.",
+      "A gothic ritual of bass, fire and moonlight inside a castle that remembers every century.",
     image: "/worlds/dracula-festival.webp",
   },
   {
     title: "Mars",
     era: "The first off-world mainstage",
     description:
-      "Humanity celebrates beneath a crimson sky, with Earth rising behind the stage.",
+      "Humanity celebrates beneath a crimson sky while Earth rises quietly behind the sound system.",
     image: "/worlds/mars-mainstage.webp",
   },
 ] as const;
 
-const signals = [
+const citizens = [
   {
-    code: "ATL-001",
-    title: "World 01 — Atlantis",
-    status: "Transmission live",
-    video: "/videos/atlantis-world-01.mp4",
-    poster: "/posters/atlantis-world-01.webp",
+    name: "Sunken Royal",
+    district: "The ceremonial quarter",
+    image: "/citizens/sunken-royal.webp",
   },
   {
-    code: "TKY-2147",
-    title: "Incoming footage",
-    status: "Transmission pending",
+    name: "Biopunk Racer",
+    district: "The flooded underground",
+    image: "/citizens/biopunk-racer.webp",
   },
   {
-    code: "DRC-013",
-    title: "Incoming footage",
-    status: "Transmission pending",
+    name: "Coral Nomad",
+    district: "The living amphitheatre",
+    image: "/citizens/coral-nomad.webp",
   },
   {
-    code: "MRS-001",
-    title: "Incoming footage",
-    status: "Transmission pending",
-  },
-  {
-    code: "EGY-404",
-    title: "Incoming footage",
-    status: "Transmission pending",
-  },
-  {
-    code: "VKG-009",
-    title: "Incoming footage",
-    status: "Transmission pending",
+    name: "Trench Mechanic",
+    district: "The abyssal pressure works",
+    image: "/citizens/trench-mechanic.webp",
   },
 ] as const;
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
+    <main className="min-h-screen overflow-hidden bg-[#030303] text-white">
       <Navbar />
       <Hero />
 
-      <section id="worlds" className="relative px-5 py-24 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 max-w-3xl">
-            <p className="eyebrow">Recovered universes</p>
-            <h2 className="section-title">
-              Festivals from worlds that never existed.
-            </h2>
-            <p className="section-copy">
-              Every FESORIA universe has its own history, atmosphere and
-              mythology. The footage feels discovered, not created.
+      <section id="worlds" className="px-3 py-24 sm:px-5 lg:py-32">
+        <Reveal className="mx-auto mb-16 max-w-[92rem] px-2 sm:px-3">
+          <p className="eyebrow">The universe archive</p>
+          <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
+            <h2 className="section-title">Not destinations. Entire realities.</h2>
+            <p className="section-copy lg:mb-2">
+              Each world has its own architecture, citizens, mythology and
+              sound. Nothing repeats except the feeling of arrival.
             </p>
           </div>
+        </Reveal>
 
-          <div className="grid gap-5 md:grid-cols-2">
-            {worlds.map((world, index) => (
-              <WorldCard key={world.title} {...world} index={index} />
-            ))}
-          </div>
+        <div className="mx-auto grid max-w-[92rem] gap-3">
+          {worlds.map((world, index) => (
+            <Reveal key={world.title}>
+              <WorldCard {...world} index={index} />
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      <section id="about" className="relative px-5 py-24 sm:px-8 lg:px-12">
+      <section id="reimagined" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
         <div className="ambient-orb ambient-orb-left" />
-        <div className="mx-auto grid max-w-7xl gap-10 rounded-[2rem] border border-white/10 bg-white/[0.035] p-7 backdrop-blur-xl md:grid-cols-[1.05fr_0.95fr] md:p-12">
-          <div>
-            <p className="eyebrow">The signal</p>
-            <h2 className="section-title">Every world has a festival.</h2>
+        <Reveal className="mx-auto max-w-[92rem]">
+          <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+            <div>
+              <p className="eyebrow">FESORIA Reimagined</p>
+              <h2 className="section-title">Familiar energy. Impossible context.</h2>
+            </div>
+            <div className="lg:pb-2">
+              <p className="section-copy">
+                Cultural signals are rebuilt inside each world—from submerged
+                anthems to music engineered for cities that do not exist yet.
+              </p>
+              <a href="#transmissions" className="text-link mt-7 inline-flex items-center gap-2">
+                Enter the transmission archive <ArrowUpRight size={17} />
+              </a>
+            </div>
           </div>
-          <div className="space-y-5 text-base leading-8 text-white/65 sm:text-lg">
-            <p>
-              FESORIA is a cinematic AI media universe built around imaginary
-              festivals, alternate histories and impossible places.
-            </p>
-            <p>
-              Each release is a fragment from somewhere else: Atlantis,
-              Transylvania, Mars, future Tokyo and worlds still waiting to be
-              found.
-            </p>
+
+          <div className="mt-16 grid gap-4 md:grid-cols-2">
+            <article className="editorial-card editorial-atlantis">
+              <div className="editorial-overlay" />
+              <div className="editorial-copy">
+                <span>REIMAGINED 001</span>
+                <h3>Atlantis × Faded</h3>
+                <p>A lost signal resurfaces beneath the mainstage.</p>
+              </div>
+            </article>
+            <article className="editorial-card editorial-tokyo">
+              <div className="editorial-overlay" />
+              <div className="editorial-copy">
+                <span>REIMAGINED 002</span>
+                <h3>Tokyo Drift × 2147</h3>
+                <p>The future has no curfew.</p>
+              </div>
+            </article>
           </div>
-        </div>
+        </Reveal>
       </section>
 
-      <section id="videos" className="px-5 py-24 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12">
-            <p className="eyebrow">Transmission archive</p>
-            <h2 className="section-title">Latest signals</h2>
+      <section id="citizens" className="border-y border-white/10 bg-[#070707] px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+        <Reveal className="mx-auto max-w-[92rem]">
+          <div className="grid gap-8 md:grid-cols-2 md:items-end">
+            <div>
+              <p className="eyebrow">Festival Citizens</p>
+              <h2 className="section-title">A world is nothing without its people.</h2>
+            </div>
+            <p className="section-copy md:justify-self-end">
+              Fashion, rituals and subcultures recovered from the crowd. Meet
+              the first citizens of Atlantis.
+            </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {signals.map((signal, index) => (
-              <article
-                key={signal.code}
-                className="group relative aspect-[9/16] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0d0d12]"
-              >
-                  {"video" in signal ? (
-                    <>
-                      <video
-                        className="h-full w-full object-cover"
-                        controls
-                        playsInline
-                        preload="metadata"
-                        poster={signal.poster}
-                        aria-label="Watch World 01 — Atlantis"
-                      >
-                        <source src={signal.video} type="video/mp4" />
-                        Your browser does not support the video element.
-                      </video>
-                      <div className="pointer-events-none absolute left-5 top-5 flex items-center gap-2 rounded-full border border-cyan-300/20 bg-black/55 px-4 py-2 text-[0.65rem] font-medium uppercase tracking-[0.22em] text-cyan-100 backdrop-blur-md">
-                        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300" />
-                        {signal.status}
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className={`signal-card signal-${index + 1}`} />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
-                      <div className="absolute inset-x-0 bottom-0 p-6">
-                        <p className="text-xs tracking-[0.28em] text-white/45">
-                          {signal.code}
-                        </p>
-                        <h3 className="mt-2 text-xl font-medium">{signal.title}</h3>
-                        <p className="mt-2 text-sm text-white/55">
-                          {signal.status}.
-                        </p>
-                      </div>
-                    </>
-                  )}
+          <div className="citizen-rail mt-16">
+            {citizens.map((citizen, index) => (
+              <article key={citizen.name} className="citizen-card">
+                <img src={citizen.image} alt={`${citizen.name}, an Atlantis festival citizen`} />
+                <div className="citizen-shade" />
+                <div className="citizen-copy">
+                  <span>Citizen {String(index + 1).padStart(2, "0")}</span>
+                  <h3>{citizen.name}</h3>
+                  <p>{citizen.district}</p>
+                </div>
               </article>
             ))}
           </div>
-        </div>
+        </Reveal>
+      </section>
+
+      <section id="transmissions" className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+        <Reveal className="mx-auto max-w-[92rem]">
+          <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
+            <div>
+              <p className="eyebrow">Transmission 001</p>
+              <h2 className="section-title">The first signal came from below.</h2>
+              <p className="section-copy">
+                Eight seconds of recovered footage opened the portal. Atlantis
+                was only the beginning.
+              </p>
+              <div className="mt-8 flex items-center gap-3 text-sm text-cyan-100/75">
+                <span className="live-dot" /> Signal online · ATL-001
+              </div>
+            </div>
+
+            <div className="transmission-frame">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster="/posters/atlantis-world-01.webp"
+                aria-label="Watch World 01 — Atlantis"
+              >
+                <source src="/videos/atlantis-world-01-fixed.mp4" type="video/mp4" />
+                Your browser does not support the video element.
+              </video>
+              <div className="transmission-mark">
+                <Play size={15} fill="currentColor" /> World 01
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+        <Reveal className="mx-auto max-w-[92rem] border-y border-white/15 py-20 text-center lg:py-28">
+          <p className="eyebrow">The signal continues</p>
+          <h2 className="mx-auto max-w-6xl text-[clamp(3.4rem,9vw,8.5rem)] font-medium leading-[0.84] tracking-[-0.07em]">
+            Every world has a festival.
+          </h2>
+          <a
+            href="https://x.com/fesoriaxyz"
+            target="_blank"
+            rel="noreferrer"
+            className="button-primary mt-10 inline-flex items-center gap-2"
+          >
+            Follow the next signal <ArrowUpRight size={18} />
+          </a>
+        </Reveal>
       </section>
 
       <Footer />
