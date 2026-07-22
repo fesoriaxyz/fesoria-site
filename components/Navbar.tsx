@@ -5,8 +5,9 @@ import { useState } from "react";
 
 const links = [
   { label: "Worlds", href: "#worlds" },
-  { label: "Signals", href: "#videos" },
-  { label: "About", href: "#about" },
+  { label: "Reimagined", href: "#reimagined" },
+  { label: "Citizens", href: "#citizens" },
+  { label: "Signals", href: "#transmissions" },
 ];
 
 export default function Navbar() {
@@ -14,8 +15,8 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-black/45 px-5 py-3 backdrop-blur-2xl">
-        <a href="#" className="text-sm font-semibold tracking-[0.32em]">
+      <nav className="nav-glass mx-auto flex max-w-[92rem] items-center justify-between px-5 py-3">
+        <a href="#" className="text-xs font-semibold tracking-[0.38em] sm:text-sm">
           FESORIA
         </a>
 
@@ -33,7 +34,7 @@ export default function Navbar() {
             href="https://x.com/fesoriaxyz"
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-white px-5 py-2 text-sm font-medium text-black transition hover:scale-[1.03]"
+            className="rounded-full bg-white px-5 py-2 text-sm font-medium text-black transition hover:bg-white/90"
           >
             Follow the signal
           </a>
@@ -50,7 +51,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="mx-auto mt-2 max-w-7xl rounded-3xl border border-white/10 bg-black/90 p-5 backdrop-blur-2xl md:hidden">
+        <div className="nav-glass mx-auto mt-2 max-w-[92rem] p-5 md:hidden">
           <div className="flex flex-col gap-4">
             {links.map((link) => (
               <a
