@@ -5,6 +5,7 @@ type WorldCardProps = {
   era: string;
   description: string;
   image: string;
+  imagePosition?: string;
   index: number;
 };
 
@@ -13,13 +14,17 @@ export default function WorldCard({
   era,
   description,
   image,
+  imagePosition = "center",
   index,
 }: WorldCardProps) {
   return (
     <article className="world-panel group relative min-h-[78svh] overflow-hidden bg-[#0b0b0d]">
       <div
         className="world-image absolute inset-0 bg-cover bg-center transition duration-[1.4s] group-hover:scale-[1.025]"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundPosition: imagePosition,
+        }}
       />
       <div className="world-shade absolute inset-0" />
 

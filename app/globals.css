@@ -142,7 +142,10 @@ body {
 }
 .editorial-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.22); }
 .editorial-atlantis { background-image: url('/worlds/atlantis.webp'); }
-.editorial-tokyo { background-image: url('/worlds/tokyo-2147-pirate.webp'); }
+.editorial-tokyo {
+  background-image: url('/worlds/tokyo-2147-pirate.webp');
+  background-position: 72% center;
+}
 .editorial-scanlines {
   position: absolute;
   inset: 0;

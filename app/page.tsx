@@ -19,6 +19,7 @@ const worlds = [
     description:
       "A pirate broadcast tears through the underground: magnetic bikes, stolen data and a city moving too fast to regulate.",
     image: "/worlds/tokyo-2147-pirate.webp",
+    imagePosition: "72% center",
   },
   {
     title: "Dracula",
