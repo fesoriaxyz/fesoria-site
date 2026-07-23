@@ -1,4 +1,4 @@
-import { ArrowUpRight, Play } from "lucide-react";
+import { ArrowUpRight, Instagram, Play, Send } from "lucide-react";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -12,13 +12,16 @@ const worlds = [
     description:
       "Ancient architecture. Bioluminescent crowds. A civilization returning for one impossible night.",
     image: "/worlds/atlantis.webp",
+    href: "/worlds/atlantis",
   },
   {
     title: "Tokyo 2147",
     era: "The future has no curfew",
     description:
-      "Neon rain falls over a city where every rooftop, transit line and augmented sky becomes a stage.",
-    image: "/worlds/tokyo-2147.webp",
+      "A pirate broadcast tears through the underground: magnetic bikes, stolen data and a city moving too fast to regulate.",
+    image: "/worlds/tokyo-2147-pirate.webp",
+    imagePosition: "72% center",
+    href: "/worlds/tokyo-2147",
   },
   {
     title: "Dracula",
@@ -115,11 +118,12 @@ export default function Home() {
               </div>
             </article>
             <article className="editorial-card editorial-tokyo">
+              <div className="editorial-scanlines" />
               <div className="editorial-overlay" />
               <div className="editorial-copy">
                 <span>REIMAGINED 002</span>
-                <h3>Tokyo Drift × 2147</h3>
-                <p>The future has no curfew.</p>
+                <h3>Tokyo 2147 — Pirate Broadcast</h3>
+                <p>An illegal signal from a city moving beyond permission.</p>
               </div>
             </article>
           </div>
@@ -153,6 +157,7 @@ export default function Home() {
             ))}
           </div>
         </Reveal>
+
       </section>
 
       <section id="transmissions" className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
@@ -187,22 +192,83 @@ export default function Home() {
             </div>
           </div>
         </Reveal>
+
+        <Reveal className="mx-auto mt-28 max-w-[92rem] border-t border-white/10 pt-28 lg:mt-40 lg:pt-40">
+          <div className="grid gap-10 lg:grid-cols-[1.28fr_0.72fr] lg:items-center">
+            <div className="transmission-frame transmission-frame-tokyo lg:order-1">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster="/posters/tokyo-2147-pirate.webp"
+                aria-label="Watch World 02 — Tokyo 2147 Pirate Broadcast"
+              >
+                <source src="/videos/tokyo-2147-pirate-11s.mp4" type="video/mp4" />
+                Your browser does not support the video element.
+              </video>
+              <div className="transmission-mark">
+                <Play size={15} fill="currentColor" /> World 02
+              </div>
+            </div>
+
+            <div className="lg:order-2">
+              <p className="eyebrow">Transmission 002</p>
+              <h2 className="section-title">The second signal was never meant to air.</h2>
+              <p className="section-copy">
+                Eleven seconds of stolen street footage. One courier, one data
+                run and a future moving beyond permission.
+              </p>
+              <div className="mt-8 flex items-center gap-3 text-sm text-lime-100/75">
+                <span className="live-dot live-dot-tokyo" /> Signal online · TKY-2147
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
-        <Reveal className="mx-auto max-w-[92rem] border-y border-white/15 py-20 text-center lg:py-28">
-          <p className="eyebrow">The signal continues</p>
-          <h2 className="mx-auto max-w-6xl text-[clamp(3.4rem,9vw,8.5rem)] font-medium leading-[0.84] tracking-[-0.07em]">
-            Every world has a festival.
-          </h2>
-          <a
-            href="https://x.com/fesoriaxyz"
-            target="_blank"
-            rel="noreferrer"
-            className="button-primary mt-10 inline-flex items-center gap-2"
-          >
-            Follow the next signal <ArrowUpRight size={18} />
-          </a>
+      <section id="join" className="px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+        <Reveal className="signal-join mx-auto max-w-[92rem]">
+          <div className="signal-join-glow" />
+          <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-end">
+            <div>
+              <p className="eyebrow">Join the transmission</p>
+              <h2 className="max-w-5xl text-[clamp(3.4rem,8vw,8rem)] font-medium leading-[0.84] tracking-[-0.07em]">
+                Don&apos;t watch the future arrive. Enter it.
+              </h2>
+            </div>
+            <div className="lg:pb-2">
+              <p className="section-copy">
+                New worlds, recovered signals and first access to everything
+                FESORIA is becoming.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+                <a
+                  href="https://t.me/fesoriaxyz"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-primary inline-flex items-center justify-center gap-2"
+                >
+                  Join Telegram <Send size={17} />
+                </a>
+                <a
+                  href="https://instagram.com/fesoriaxyz"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-ghost inline-flex items-center justify-center gap-2"
+                >
+                  Follow Instagram <Instagram size={17} />
+                </a>
+              </div>
+              <a
+                href="https://tiktok.com/@fesoriaxyz"
+                target="_blank"
+                rel="noreferrer"
+                className="text-link mt-6 inline-flex items-center gap-2"
+              >
+                Watch the latest transmission on TikTok <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
         </Reveal>
       </section>
 

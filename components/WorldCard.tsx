@@ -1,10 +1,13 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 type WorldCardProps = {
   title: string;
   era: string;
   description: string;
   image: string;
+  imagePosition?: string;
+  href?: string;
   index: number;
 };
 
@@ -13,13 +16,18 @@ export default function WorldCard({
   era,
   description,
   image,
+  imagePosition = "center",
+  href,
   index,
 }: WorldCardProps) {
   return (
     <article className="world-panel group relative min-h-[78svh] overflow-hidden bg-[#0b0b0d]">
       <div
         className="world-image absolute inset-0 bg-cover bg-center transition duration-[1.4s] group-hover:scale-[1.025]"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundPosition: imagePosition,
+        }}
       />
       <div className="world-shade absolute inset-0" />
 
@@ -40,6 +48,14 @@ export default function WorldCard({
             {title}
           </h3>
           <p className="mt-6 max-w-xl text-base leading-7 text-white/70 sm:text-lg">{description}</p>
+          {href && (
+            <Link
+              href={href}
+              className="button-ghost mt-7 inline-flex items-center gap-2"
+            >
+              Enter this world <ArrowUpRight size={17} />
+            </Link>
+          )}
         </div>
       </div>
     </article>
