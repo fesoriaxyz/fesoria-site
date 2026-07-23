@@ -40,22 +40,22 @@ const citizens = [
   {
     name: "Sunken Royal",
     district: "The ceremonial quarter",
-    image: "/citizens/sunken-royal.webp",
+    image: "/citizens/sunken-royal-v2.webp",
   },
   {
     name: "Biopunk Racer",
     district: "The flooded underground",
-    image: "/citizens/biopunk-racer.webp",
+    image: "/citizens/biopunk-racer-v2.webp",
   },
   {
     name: "Coral Nomad",
     district: "The living amphitheatre",
-    image: "/citizens/coral-nomad.webp",
+    image: "/citizens/coral-nomad-v2.webp",
   },
   {
     name: "Trench Mechanic",
     district: "The abyssal pressure works",
-    image: "/citizens/trench-mechanic.webp",
+    image: "/citizens/trench-mechanic-v2.webp",
   },
 ] as const;
 
