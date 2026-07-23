@@ -285,6 +285,73 @@ body {
   color: rgba(255,255,255,.38);
 }
 
+.tokyo-detail {
+  --tokyo-acid: #bdff3f;
+  --tokyo-red: #ff3b1f;
+}
+.tokyo-detail .world-detail-hero {
+  background: #080706;
+}
+.tokyo-detail .world-detail-image {
+  background-position: 72% center;
+  filter: saturate(.92) contrast(1.12);
+}
+.tokyo-detail .world-detail-shade {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.18) 38%, #030303 100%),
+    linear-gradient(90deg, rgba(0,0,0,.88), rgba(0,0,0,.18) 64%);
+}
+.tokyo-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .21;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0, transparent 3px, rgba(255,255,255,.12) 4px),
+    linear-gradient(90deg, transparent 0 49.9%, rgba(189,255,63,.14) 50%, transparent 50.1%);
+  mix-blend-mode: overlay;
+}
+.tokyo-code {
+  color: var(--tokyo-acid);
+  text-shadow: 0 0 24px rgba(189,255,63,.35);
+}
+.tokyo-red {
+  color: var(--tokyo-red);
+}
+.tokyo-manifesto {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(189,255,63,.18);
+  border-radius: clamp(1.5rem, 4vw, 3rem);
+  background:
+    linear-gradient(120deg, rgba(255,59,31,.11), transparent 42%),
+    #080808;
+}
+.tokyo-manifesto::after {
+  content: "TKY-2147 // UNLICENSED";
+  position: absolute;
+  right: -1rem;
+  top: 2rem;
+  font-size: clamp(2.6rem, 8vw, 8rem);
+  font-weight: 600;
+  line-height: .8;
+  letter-spacing: -.07em;
+  color: rgba(255,255,255,.025);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.tokyo-protocol {
+  border-left: 1px solid rgba(189,255,63,.32);
+  padding-left: 1.25rem;
+}
+.tokyo-protocol span {
+  display: block;
+  margin-bottom: .55rem;
+  color: rgba(189,255,63,.75);
+  font-size: .62rem;
+  letter-spacing: .25em;
+}
+
 .reveal { opacity: 0; transform: translateY(38px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
 .reveal[data-visible="true"] { opacity: 1; transform: translateY(0); }
 
