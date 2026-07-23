@@ -164,7 +164,7 @@ body {
   scroll-snap-align: start;
   background: #111;
 }
-.citizen-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.2,.8,.2,1); }
+.citizen-card img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 1s cubic-bezier(.2,.8,.2,1); }
 .citizen-card:hover img { transform: scale(1.035); }
 .citizen-shade { position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(0,0,0,.9)); }
 .citizen-copy { position: absolute; inset: auto 0 0; padding: 1.5rem; }
