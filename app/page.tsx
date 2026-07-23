@@ -17,8 +17,8 @@ const worlds = [
     title: "Tokyo 2147",
     era: "The future has no curfew",
     description:
-      "Neon rain falls over a city where every rooftop, transit line and augmented sky becomes a stage.",
-    image: "/worlds/tokyo-2147.webp",
+      "A pirate broadcast tears through the underground: magnetic bikes, stolen data and a city moving too fast to regulate.",
+    image: "/worlds/tokyo-2147-pirate.webp",
   },
   {
     title: "Dracula",
@@ -115,11 +115,12 @@ export default function Home() {
               </div>
             </article>
             <article className="editorial-card editorial-tokyo">
+              <div className="editorial-scanlines" />
               <div className="editorial-overlay" />
               <div className="editorial-copy">
                 <span>REIMAGINED 002</span>
-                <h3>Tokyo Drift × 2147</h3>
-                <p>The future has no curfew.</p>
+                <h3>Tokyo 2147 — Pirate Broadcast</h3>
+                <p>An illegal signal from a city moving beyond permission.</p>
               </div>
             </article>
           </div>
@@ -153,6 +154,7 @@ export default function Home() {
             ))}
           </div>
         </Reveal>
+
       </section>
 
       <section id="transmissions" className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
@@ -183,6 +185,38 @@ export default function Home() {
               </video>
               <div className="transmission-mark">
                 <Play size={15} fill="currentColor" /> World 01
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="mx-auto mt-28 max-w-[92rem] border-t border-white/10 pt-28 lg:mt-40 lg:pt-40">
+          <div className="grid gap-10 lg:grid-cols-[1.28fr_0.72fr] lg:items-center">
+            <div className="transmission-frame transmission-frame-tokyo lg:order-1">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster="/posters/tokyo-2147-pirate.webp"
+                aria-label="Watch World 02 — Tokyo 2147 Pirate Broadcast"
+              >
+                <source src="/videos/tokyo-2147-pirate-11s.mp4" type="video/mp4" />
+                Your browser does not support the video element.
+              </video>
+              <div className="transmission-mark">
+                <Play size={15} fill="currentColor" /> World 02
+              </div>
+            </div>
+
+            <div className="lg:order-2">
+              <p className="eyebrow">Transmission 002</p>
+              <h2 className="section-title">The second signal was never meant to air.</h2>
+              <p className="section-copy">
+                Eleven seconds of stolen street footage. One courier, one data
+                run and a future moving beyond permission.
+              </p>
+              <div className="mt-8 flex items-center gap-3 text-sm text-lime-100/75">
+                <span className="live-dot live-dot-tokyo" /> Signal online · TKY-2147
               </div>
             </div>
           </div>
