@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 type WorldCardProps = {
   title: string;
@@ -6,6 +7,7 @@ type WorldCardProps = {
   description: string;
   image: string;
   imagePosition?: string;
+  href?: string;
   index: number;
 };
 
@@ -15,6 +17,7 @@ export default function WorldCard({
   description,
   image,
   imagePosition = "center",
+  href,
   index,
 }: WorldCardProps) {
   return (
@@ -45,6 +48,14 @@ export default function WorldCard({
             {title}
           </h3>
           <p className="mt-6 max-w-xl text-base leading-7 text-white/70 sm:text-lg">{description}</p>
+          {href && (
+            <Link
+              href={href}
+              className="button-ghost mt-7 inline-flex items-center gap-2"
+            >
+              Enter this world <ArrowUpRight size={17} />
+            </Link>
+          )}
         </div>
       </div>
     </article>

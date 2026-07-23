@@ -1,4 +1,4 @@
-import { ArrowUpRight, Play } from "lucide-react";
+import { ArrowUpRight, Instagram, Play, Send } from "lucide-react";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -12,6 +12,7 @@ const worlds = [
     description:
       "Ancient architecture. Bioluminescent crowds. A civilization returning for one impossible night.",
     image: "/worlds/atlantis.webp",
+    href: "/worlds/atlantis",
   },
   {
     title: "Tokyo 2147",
@@ -224,20 +225,49 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
-        <Reveal className="mx-auto max-w-[92rem] border-y border-white/15 py-20 text-center lg:py-28">
-          <p className="eyebrow">The signal continues</p>
-          <h2 className="mx-auto max-w-6xl text-[clamp(3.4rem,9vw,8.5rem)] font-medium leading-[0.84] tracking-[-0.07em]">
-            Every world has a festival.
-          </h2>
-          <a
-            href="https://x.com/fesoriaxyz"
-            target="_blank"
-            rel="noreferrer"
-            className="button-primary mt-10 inline-flex items-center gap-2"
-          >
-            Follow the next signal <ArrowUpRight size={18} />
-          </a>
+      <section id="join" className="px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+        <Reveal className="signal-join mx-auto max-w-[92rem]">
+          <div className="signal-join-glow" />
+          <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-end">
+            <div>
+              <p className="eyebrow">Join the transmission</p>
+              <h2 className="max-w-5xl text-[clamp(3.4rem,8vw,8rem)] font-medium leading-[0.84] tracking-[-0.07em]">
+                Don&apos;t watch the future arrive. Enter it.
+              </h2>
+            </div>
+            <div className="lg:pb-2">
+              <p className="section-copy">
+                New worlds, recovered signals and first access to everything
+                FESORIA is becoming.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+                <a
+                  href="https://t.me/fesoriaxyz"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-primary inline-flex items-center justify-center gap-2"
+                >
+                  Join Telegram <Send size={17} />
+                </a>
+                <a
+                  href="https://instagram.com/fesoriaxyz"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-ghost inline-flex items-center justify-center gap-2"
+                >
+                  Follow Instagram <Instagram size={17} />
+                </a>
+              </div>
+              <a
+                href="https://tiktok.com/@fesoriaxyz"
+                target="_blank"
+                rel="noreferrer"
+                className="text-link mt-6 inline-flex items-center gap-2"
+              >
+                Watch the latest transmission on TikTok <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
         </Reveal>
       </section>
 

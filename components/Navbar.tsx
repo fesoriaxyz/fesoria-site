@@ -4,10 +4,10 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const links = [
-  { label: "Worlds", href: "#worlds" },
-  { label: "Reimagined", href: "#reimagined" },
-  { label: "Citizens", href: "#citizens" },
-  { label: "Signals", href: "#transmissions" },
+  { label: "Worlds", href: "/#worlds" },
+  { label: "Reimagined", href: "/#reimagined" },
+  { label: "Citizens", href: "/#citizens" },
+  { label: "Signals", href: "/#transmissions" },
 ];
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <nav className="nav-glass mx-auto flex max-w-[92rem] items-center justify-between px-5 py-3">
-        <a href="#" className="text-xs font-semibold tracking-[0.38em] sm:text-sm">
+        <a href="/" className="text-xs font-semibold tracking-[0.38em] sm:text-sm">
           FESORIA
         </a>
 
@@ -31,12 +31,10 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://x.com/fesoriaxyz"
-            target="_blank"
-            rel="noreferrer"
+            href="/#join"
             className="rounded-full bg-white px-5 py-2 text-sm font-medium text-black transition hover:bg-white/90"
           >
-            Follow the signal
+            Join the signal
           </a>
         </div>
 
@@ -63,6 +61,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/#join"
+              onClick={() => setOpen(false)}
+              className="mt-2 rounded-full bg-white px-5 py-3 text-center font-medium text-black"
+            >
+              Join the signal
+            </a>
           </div>
         </div>
       )}
