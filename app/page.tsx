@@ -5,61 +5,57 @@ import Navbar from "@/components/Navbar";
 import Reveal from "@/components/Reveal";
 import WorldCard from "@/components/WorldCard";
 
-const worlds = [
+const episodes = [
   {
-    title: "Atlantis",
-    era: "Lost beneath the surface",
+    title: "The Floating City",
+    era: "Above the clouds, the core awakens",
     description:
-      "Ancient architecture. Bioluminescent crowds. A civilization returning for one impossible night.",
+      "A civilization suspended above the clouds, powered by an ancient energy core that has begun to pulse again.",
     image: "/worlds/atlantis.webp",
-    href: "/worlds/atlantis",
+    href: "#transmissions",
+    status: "Online",
   },
   {
-    title: "Tokyo 2147",
+    title: "Neo Tokyo",
     era: "The future has no curfew",
     description:
-      "A pirate broadcast tears through the underground: magnetic bikes, stolen data and a city moving too fast to regulate.",
+      "A neon megacity moving beyond permission, where one courier carries a signal capable of changing every world.",
     image: "/worlds/tokyo-2147-pirate.webp",
     imagePosition: "72% center",
-    href: "/worlds/tokyo-2147",
+    status: "In production",
   },
   {
-    title: "Dracula",
-    era: "Midnight in Transylvania",
+    title: "Atlantia",
+    era: "A civilization beneath the surface",
     description:
-      "A gothic ritual of bass, fire and moonlight inside a castle that remembers every century.",
-    image: "/worlds/dracula-festival.webp",
+      "Ancient architecture, living light and a submerged culture waiting to reconnect with the universe above.",
+    image: "/worlds/atlantis.webp",
+    status: "Concept",
   },
   {
-    title: "Mars",
-    era: "The first off-world mainstage",
+    title: "The Core",
+    era: "The source behind every signal",
     description:
-      "Humanity celebrates beneath a crimson sky while Earth rises quietly behind the sound system.",
+      "An impossible energy system linking distant civilizations through a network older than recorded history.",
     image: "/worlds/mars-mainstage.webp",
+    status: "Locked",
+  },
+  {
+    title: "The Portal",
+    era: "Destination unknown",
+    description:
+      "The gateway has appeared. Nobody knows who built it, where it leads or what is already coming through.",
+    image: "/worlds/dracula-festival.webp",
+    status: "Unknown",
   },
 ] as const;
 
-const citizens = [
-  {
-    name: "Sunken Royal",
-    district: "The ceremonial quarter",
-    image: "/citizens/sunken-royal-v2.webp",
-  },
-  {
-    name: "Biopunk Racer",
-    district: "The flooded underground",
-    image: "/citizens/biopunk-racer-v2.webp",
-  },
-  {
-    name: "Coral Nomad",
-    district: "The living amphitheatre",
-    image: "/citizens/coral-nomad-v2.webp",
-  },
-  {
-    name: "Trench Mechanic",
-    district: "The abyssal pressure works",
-    image: "/citizens/trench-mechanic-v2.webp",
-  },
+const timeline = [
+  { code: "EP01", title: "The Floating City", status: "Online" },
+  { code: "EP02", title: "Neo Tokyo", status: "In production" },
+  { code: "EP03", title: "Atlantia", status: "Concept" },
+  { code: "EP04", title: "The Core", status: "Locked" },
+  { code: "EP05", title: "The Portal", status: "Unknown" },
 ] as const;
 
 export default function Home() {
@@ -70,20 +66,20 @@ export default function Home() {
 
       <section id="worlds" className="px-3 py-24 sm:px-5 lg:py-32">
         <Reveal className="mx-auto mb-16 max-w-[92rem] px-2 sm:px-3">
-          <p className="eyebrow">The universe archive</p>
+          <p className="eyebrow">Episodes</p>
           <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
-            <h2 className="section-title">Not destinations. Entire realities.</h2>
+            <h2 className="section-title">Every episode reveals another world.</h2>
             <p className="section-copy lg:mb-2">
-              Each world has its own architecture, citizens, mythology and
-              sound. Nothing repeats except the feeling of arrival.
+              Follow the FESORIA universe as new civilizations, signals and
+              connections are revealed one episode at a time.
             </p>
           </div>
         </Reveal>
 
         <div className="mx-auto grid max-w-[92rem] gap-3">
-          {worlds.map((world, index) => (
-            <Reveal key={world.title}>
-              <WorldCard {...world} index={index} />
+          {episodes.map((episode, index) => (
+            <Reveal key={episode.title}>
+              <WorldCard {...episode} index={index} />
             </Reveal>
           ))}
         </div>
@@ -94,13 +90,13 @@ export default function Home() {
         <Reveal className="mx-auto max-w-[92rem]">
           <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
             <div>
-              <p className="eyebrow">FESORIA Reimagined</p>
-              <h2 className="section-title">Familiar energy. Impossible context.</h2>
+              <p className="eyebrow">Recovered signals</p>
+              <h2 className="section-title">Fragments from a universe still unfolding.</h2>
             </div>
             <div className="lg:pb-2">
               <p className="section-copy">
-                Cultural signals are rebuilt inside each world—from submerged
-                anthems to music engineered for cities that do not exist yet.
+                Each transmission reveals another piece of FESORIA through
+                architecture, movement, sound and hidden connections.
               </p>
               <a href="#transmissions" className="text-link mt-7 inline-flex items-center gap-2">
                 Enter the transmission archive <ArrowUpRight size={17} />
@@ -112,17 +108,17 @@ export default function Home() {
             <article className="editorial-card editorial-atlantis">
               <div className="editorial-overlay" />
               <div className="editorial-copy">
-                <span>REIMAGINED 001</span>
-                <h3>Atlantis × Faded</h3>
-                <p>A lost signal resurfaces beneath the mainstage.</p>
+                <span>ARCHIVE 001</span>
+                <h3>The first awakening</h3>
+                <p>An ancient signal returns from beyond the clouds.</p>
               </div>
             </article>
             <article className="editorial-card editorial-tokyo">
               <div className="editorial-scanlines" />
               <div className="editorial-overlay" />
               <div className="editorial-copy">
-                <span>REIMAGINED 002</span>
-                <h3>Tokyo 2147 — Pirate Broadcast</h3>
+                <span>ARCHIVE 002</span>
+                <h3>Neo Tokyo — Pirate Broadcast</h3>
                 <p>An illegal signal from a city moving beyond permission.</p>
               </div>
             </article>
@@ -130,48 +126,57 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section id="citizens" className="border-y border-white/10 bg-[#070707] px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+      <section id="timeline" className="border-y border-white/10 bg-[#070707] px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
         <Reveal className="mx-auto max-w-[92rem]">
           <div className="grid gap-8 md:grid-cols-2 md:items-end">
             <div>
-              <p className="eyebrow">Festival Citizens</p>
-              <h2 className="section-title">A world is nothing without its people.</h2>
+              <p className="eyebrow">Universe timeline</p>
+              <h2 className="section-title">The story is being built in public.</h2>
             </div>
             <p className="section-copy md:justify-self-end">
-              Fashion, rituals and subcultures recovered from the crowd. Meet
-              the first citizens of Atlantis.
+              Every new release moves the universe forward. Return to see which
+              signal comes online next.
             </p>
           </div>
 
-          <div className="citizen-rail mt-16">
-            {citizens.map((citizen, index) => (
-              <article key={citizen.name} className="citizen-card">
-                <img src={citizen.image} alt={`${citizen.name}, an Atlantis festival citizen`} />
-                <div className="citizen-shade" />
-                <div className="citizen-copy">
-                  <span>Citizen {String(index + 1).padStart(2, "0")}</span>
-                  <h3>{citizen.name}</h3>
-                  <p>{citizen.district}</p>
+          <div className="mt-16 border-t border-white/12">
+            {timeline.map((episode, index) => (
+              <article
+                key={episode.code}
+                className="grid gap-4 border-b border-white/12 py-7 sm:grid-cols-[0.3fr_1fr_auto] sm:items-center sm:py-9"
+              >
+                <span className="text-xs font-medium tracking-[0.28em] text-white/45">
+                  {episode.code}
+                </span>
+                <h3 className="text-2xl font-medium tracking-[-0.035em] sm:text-4xl">
+                  {episode.title}
+                </h3>
+                <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/58">
+                  <span
+                    className={`h-2 w-2 rounded-full ${
+                      index === 0 ? "bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.9)]" : "bg-white/25"
+                    }`}
+                  />
+                  {episode.status}
                 </div>
               </article>
             ))}
           </div>
         </Reveal>
-
       </section>
 
       <section id="transmissions" className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
         <Reveal className="mx-auto max-w-[92rem]">
           <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
             <div>
-              <p className="eyebrow">Transmission 001</p>
-              <h2 className="section-title">The first signal came from below.</h2>
+              <p className="eyebrow">Episode 01</p>
+              <h2 className="section-title">The Floating City is online.</h2>
               <p className="section-copy">
-                Eight seconds of recovered footage opened the portal. Atlantis
-                was only the beginning.
+                The first recovered footage reveals a civilization suspended
+                above the clouds and the energy core awakening at its center.
               </p>
               <div className="mt-8 flex items-center gap-3 text-sm text-cyan-100/75">
-                <span className="live-dot" /> Signal online · ATL-001
+                <span className="live-dot" /> Episode online · EP01
               </div>
             </div>
 
@@ -181,13 +186,13 @@ export default function Home() {
                 playsInline
                 preload="metadata"
                 poster="/posters/atlantis-world-01.webp"
-                aria-label="Watch World 01 — Atlantis"
+                aria-label="Watch Episode 01 — The Floating City"
               >
                 <source src="/videos/atlantis-world-01-fixed.mp4" type="video/mp4" />
                 Your browser does not support the video element.
               </video>
               <div className="transmission-mark">
-                <Play size={15} fill="currentColor" /> World 01
+                <Play size={15} fill="currentColor" /> Episode 01
               </div>
             </div>
           </div>
@@ -201,25 +206,25 @@ export default function Home() {
                 playsInline
                 preload="metadata"
                 poster="/posters/tokyo-2147-pirate.webp"
-                aria-label="Watch World 02 — Tokyo 2147 Pirate Broadcast"
+                aria-label="Watch Neo Tokyo concept transmission"
               >
                 <source src="/videos/tokyo-2147-pirate-11s.mp4" type="video/mp4" />
                 Your browser does not support the video element.
               </video>
               <div className="transmission-mark">
-                <Play size={15} fill="currentColor" /> World 02
+                <Play size={15} fill="currentColor" /> Episode 02 concept
               </div>
             </div>
 
             <div className="lg:order-2">
-              <p className="eyebrow">Transmission 002</p>
-              <h2 className="section-title">The second signal was never meant to air.</h2>
+              <p className="eyebrow">Episode 02 · In production</p>
+              <h2 className="section-title">Neo Tokyo was never meant to air.</h2>
               <p className="section-copy">
-                Eleven seconds of stolen street footage. One courier, one data
-                run and a future moving beyond permission.
+                Stolen street footage reveals one courier, one data run and a
+                future moving faster than anyone can control.
               </p>
               <div className="mt-8 flex items-center gap-3 text-sm text-lime-100/75">
-                <span className="live-dot live-dot-tokyo" /> Signal online · TKY-2147
+                <span className="live-dot live-dot-tokyo" /> Production signal · EP02
               </div>
             </div>
           </div>
@@ -238,7 +243,7 @@ export default function Home() {
             </div>
             <div className="lg:pb-2">
               <p className="section-copy">
-                New worlds, recovered signals and first access to everything
+                New episodes, recovered signals and first access to everything
                 FESORIA is becoming.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
