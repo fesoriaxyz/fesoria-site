@@ -21,45 +21,39 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-[92rem]">
         <div className="hero-kicker mb-7 flex items-center gap-3 text-[0.66rem] font-medium uppercase tracking-[0.28em] text-white/60">
           <span className="live-dot" />
-          Signal 001 · Atlantis online
+          Episode 01 · The Floating City online
         </div>
 
-        <h1 className="max-w-[1050px] text-[clamp(4.25rem,12.5vw,11rem)] font-medium leading-[0.76] tracking-[-0.078em]">
-          Worlds worth
-          <span className="block text-white/48">losing yourself in.</span>
+        <h1 className="max-w-[1120px] text-[clamp(4.25rem,12.5vw,11rem)] font-medium leading-[0.76] tracking-[-0.078em]">
+          One universe.
+          <span className="block text-white/48">Infinite worlds.</span>
         </h1>
 
         <div className="mt-9 flex max-w-4xl flex-col justify-between gap-8 border-t border-white/20 pt-7 md:flex-row md:items-end">
           <p className="max-w-xl text-lg leading-8 text-white/72 sm:text-xl">
-            Impossible festivals, cinematic transmissions and the people who
-            inhabit them. Welcome to FESORIA.
+            Discover cinematic episodes from a universe where every world has
+            its own history, architecture and soundtrack.
           </p>
 
           <div className="flex flex-wrap gap-3">
-          <a
-            href="#worlds"
-              className="button-primary group flex items-center gap-2"
-          >
-              Explore the worlds
-            <ArrowUpRight
-              size={18}
-              className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </a>
-          <a
-              href="#transmissions"
-              className="button-ghost flex items-center gap-2"
-          >
+            <a href="#transmissions" className="button-primary group flex items-center gap-2">
               <Play size={15} fill="currentColor" />
-              Watch signal
-          </a>
+              Watch Episode 01
+            </a>
+            <a href="#worlds" className="button-ghost flex items-center gap-2">
+              Explore episodes
+              <ArrowUpRight
+                size={18}
+                className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </a>
           </div>
         </div>
       </div>
 
       <a
         href="#worlds"
-        aria-label="Scroll to worlds"
+        aria-label="Scroll to episodes"
         className="absolute bottom-7 right-7 z-10 hidden animate-bounce text-white/45 sm:block lg:right-12"
       >
         <ArrowDown size={22} />
