@@ -3,18 +3,11 @@ import { ArrowDown, ArrowUpRight, Play } from "lucide-react";
 export default function Hero() {
   return (
     <section className="hero-shell relative flex min-h-[100svh] items-end overflow-hidden px-5 pb-16 pt-32 sm:px-8 sm:pb-20 lg:px-12">
-      <video
-        className="hero-film"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        poster="/posters/atlantis-world-01.webp"
-        aria-hidden="true"
-      >
-        <source src="/videos/atlantis-world-01-fixed.mp4" type="video/mp4" />
-      </video>
+      <img
+        src="/worlds/floating-city.svg"
+        alt="The Floating City above the clouds, powered by a glowing energy core"
+        className="hero-film object-cover"
+      />
       <div className="hero-shade" />
       <div className="absolute inset-0 grid-noise opacity-50" />
 
@@ -38,7 +31,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3">
             <a href="#transmissions" className="button-primary group flex items-center gap-2">
               <Play size={15} fill="currentColor" />
-              Watch Episode 01
+              Discover Episode 01
             </a>
             <a href="#worlds" className="button-ghost flex items-center gap-2">
               Explore episodes
