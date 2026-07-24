@@ -29,7 +29,7 @@ const episodes = [
     era: "A civilization beneath the surface",
     description:
       "Ancient architecture, living light and a submerged culture waiting to reconnect with the universe above.",
-    image: "/worlds/atlantis.webp",
+    image: "/worlds/atlantia-ep03.webp",
     href: "/worlds/atlantis",
     status: "Concept",
   },
@@ -38,7 +38,7 @@ const episodes = [
     era: "The source behind every signal",
     description:
       "An impossible energy system linking distant civilizations through a network older than recorded history.",
-    image: "/worlds/mars-mainstage.webp",
+    image: "/worlds/the-core-ep04.webp",
     status: "Locked",
   },
   {
@@ -46,7 +46,7 @@ const episodes = [
     era: "Destination unknown",
     description:
       "The gateway has appeared. Nobody knows who built it, where it leads or what is already coming through.",
-    image: "/worlds/dracula-festival.webp",
+    image: "/worlds/the-portal-ep05.webp",
     status: "Unknown",
   },
 ] as const;

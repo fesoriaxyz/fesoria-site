@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Atlantia — Episode 03 | FESORIA",
     description: "A civilization beneath the surface. Signal pending.",
-    images: ["/worlds/atlantis.webp"],
+    images: ["/worlds/atlantia-ep03.webp"],
   },
 };
 
@@ -30,7 +30,7 @@ export default function AtlantiaPage() {
       <section className="world-detail-hero">
         <div
           className="world-detail-image"
-          style={{ backgroundImage: "url('/worlds/atlantis.webp')" }}
+          style={{ backgroundImage: "url('/worlds/atlantia-ep03.webp')" }}
         />
         <div className="world-detail-shade" />
         <div className="relative z-10 mx-auto w-full max-w-[92rem] px-6 pb-16 pt-40 sm:px-10 lg:px-14 lg:pb-24">
