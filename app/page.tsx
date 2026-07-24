@@ -188,7 +188,7 @@ export default function Home() {
                 poster="/posters/atlantis-world-01.webp"
                 aria-label="Watch Episode 01 — The Floating City"
               >
-                <source src="/videos/atlantis-world-01-fixed.mp4" type="video/mp4" />
+                <source src="/videos/floating-city-ep01.mp4" type="video/mp4" />
                 Your browser does not support the video element.
               </video>
               <div className="transmission-mark">
