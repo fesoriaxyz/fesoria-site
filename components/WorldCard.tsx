@@ -22,12 +22,14 @@ export default function WorldCard({
   status,
   index,
 }: WorldCardProps) {
+  const artwork = index === 0 ? "/worlds/floating-city.svg" : image;
+
   return (
     <article className="world-panel group relative min-h-[78svh] overflow-hidden bg-[#0b0b0d]">
       <div
         className="world-image absolute inset-0 bg-cover bg-center transition duration-[1.4s] group-hover:scale-[1.025]"
         style={{
-          backgroundImage: `url(${image})`,
+          backgroundImage: `url(${artwork})`,
           backgroundPosition: imagePosition,
         }}
       />
@@ -53,7 +55,7 @@ export default function WorldCard({
           </p>
           {href && (
             <Link href={href} className="button-ghost mt-7 inline-flex items-center gap-2">
-              Watch episode <ArrowUpRight size={17} />
+              Discover episode <ArrowUpRight size={17} />
             </Link>
           )}
         </div>
