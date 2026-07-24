@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Atlantia — Episode 03 | FESORIA",
   description:
     "Enter Atlantia, a submerged civilization waiting to reconnect with the universe above.",
+  alternates: {
+    canonical: "/worlds/atlantia",
+  },
   openGraph: {
     title: "Atlantia — Episode 03 | FESORIA",
     description: "A civilization beneath the surface. Signal pending.",

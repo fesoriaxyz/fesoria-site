@@ -30,7 +30,7 @@ const episodes = [
     description:
       "Ancient architecture, living light and a submerged culture waiting to reconnect with the universe above.",
     image: "/worlds/atlantia-ep03.webp",
-    href: "/worlds/atlantis",
+    href: "/worlds/atlantia",
     status: "Concept",
   },
   {

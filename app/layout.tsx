@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description:
     "Discover cinematic episodes from an expanding universe of impossible cities, recovered signals and connected worlds.",
   metadataBase: new URL("https://fesoria.xyz"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "FESORIA",
     description: "One universe. Infinite worlds.",

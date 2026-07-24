@@ -1,6 +1,6 @@
 # FESORIA
 
-Official website for **FESORIA — AI-generated festival universes**.
+Official website for **FESORIA — One universe. Infinite worlds.**
 
 ## Run locally
 
@@ -15,7 +15,10 @@ Open `http://localhost:3000`.
 
 Import this repository into Vercel. The default settings are enough.
 
-## Customize
+## Current universe
 
-Update social links in `components/Footer.tsx` and `components/Navbar.tsx`.
-Replace placeholder world visuals in `components/WorldCard.tsx` with your own images or videos later.
+- EP01 — The Floating City
+- EP02 — Neo Tokyo
+- EP03 — Atlantia
+- EP04 — The Core
+- EP05 — The Portal
