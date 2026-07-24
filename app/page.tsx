@@ -20,8 +20,7 @@ const episodes = [
     era: "The future has no curfew",
     description:
       "A neon megacity moving beyond permission, where one courier carries a signal capable of changing every world.",
-    image: "/worlds/tokyo-2147-pirate.webp",
-    imagePosition: "72% center",
+    image: "/worlds/neo-tokyo-ep02.webp",
     href: "/worlds/tokyo-2147",
     status: "In production",
   },
@@ -202,15 +201,15 @@ export default function Home() {
 
         <Reveal className="mx-auto mt-28 max-w-[92rem] border-t border-white/10 pt-28 lg:mt-40 lg:pt-40">
           <div className="grid gap-10 lg:grid-cols-[1.28fr_0.72fr] lg:items-center">
-            <div className="transmission-frame transmission-frame-tokyo lg:order-1">
+            <div className="transmission-frame transmission-frame-tokyo transmission-frame-wide lg:order-1">
               <video
                 controls
                 playsInline
                 preload="metadata"
-                poster="/posters/tokyo-2147-pirate.webp"
+                poster="/worlds/neo-tokyo-ep02.webp"
                 aria-label="Watch Neo Tokyo concept transmission"
               >
-                <source src="/videos/tokyo-2147-pirate-11s.mp4" type="video/mp4" />
+                <source src="/videos/neo-tokyo-ep02.mp4" type="video/mp4" />
                 Your browser does not support the video element.
               </video>
               <div className="transmission-mark">

@@ -143,8 +143,8 @@ body {
 .editorial-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.22); }
 .editorial-floating-city { background-image: url('/worlds/floating-city-ep01.webp'); }
 .editorial-tokyo {
-  background-image: url('/worlds/tokyo-2147-pirate.webp');
-  background-position: 72% center;
+  background-image: url('/worlds/neo-tokyo-ep02.webp');
+  background-position: center;
 }
 .editorial-scanlines {
   position: absolute;

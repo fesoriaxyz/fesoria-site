@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Neo Tokyo — Episode 02 | FESORIA",
     description: "The future has no curfew.",
-    images: ["/worlds/tokyo-2147-pirate.webp"],
+    images: ["/worlds/neo-tokyo-ep02.webp"],
   },
 };
 
@@ -29,7 +29,7 @@ export default function TokyoPage() {
       <section className="world-detail-hero">
         <div
           className="world-detail-image"
-          style={{ backgroundImage: "url('/worlds/tokyo-2147-pirate.webp')" }}
+          style={{ backgroundImage: "url('/worlds/neo-tokyo-ep02.webp')" }}
         />
         <div className="world-detail-shade" />
         <div className="tokyo-grid" />
@@ -94,15 +94,15 @@ export default function TokyoPage() {
               </div>
             </div>
 
-            <div className="transmission-frame transmission-frame-tokyo">
+            <div className="transmission-frame transmission-frame-tokyo transmission-frame-wide">
               <video
                 controls
                 playsInline
                 preload="metadata"
-                poster="/posters/tokyo-2147-pirate.webp"
+                poster="/worlds/neo-tokyo-ep02.webp"
                 aria-label="Watch Tokyo 2147 Pirate Broadcast"
               >
-                <source src="/videos/tokyo-2147-pirate-11s.mp4" type="video/mp4" />
+                <source src="/videos/neo-tokyo-ep02.mp4" type="video/mp4" />
               </video>
               <div className="transmission-mark">
                 <Play size={15} fill="currentColor" /> Pirate signal 02
