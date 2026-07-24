@@ -141,7 +141,7 @@ body {
   transition: transform .6s cubic-bezier(.2,.8,.2,1), border-color .6s ease;
 }
 .editorial-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.22); }
-.editorial-atlantis { background-image: url('/worlds/atlantis.webp'); }
+.editorial-floating-city { background-image: url('/worlds/floating-city-ep01.webp'); }
 .editorial-tokyo {
   background-image: url('/worlds/tokyo-2147-pirate.webp');
   background-position: 72% center;
@@ -162,35 +162,9 @@ body {
 }
 .editorial-overlay { position: absolute; inset: 0; background: linear-gradient(transparent 20%, rgba(0,0,0,.88)); }
 .editorial-copy { position: absolute; z-index: 2; inset: auto 0 0; padding: clamp(1.6rem,4vw,3rem); }
-.editorial-copy span, .citizen-copy span { font-size: .62rem; letter-spacing: .26em; color: rgba(255,255,255,.5); }
+.editorial-copy span { font-size: .62rem; letter-spacing: .26em; color: rgba(255,255,255,.5); }
 .editorial-copy h3 { margin-top: .75rem; font-size: clamp(2.25rem,5vw,4.7rem); font-weight: 500; line-height: .92; letter-spacing: -.055em; }
 .editorial-copy p { margin-top: 1rem; color: rgba(255,255,255,.62); }
-
-.citizen-rail {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(280px, 25%);
-  gap: .75rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,.22) transparent;
-}
-.citizen-card {
-  position: relative;
-  min-height: 610px;
-  overflow: hidden;
-  border-radius: 1.5rem;
-  scroll-snap-align: start;
-  background: #111;
-}
-.citizen-card img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 1s cubic-bezier(.2,.8,.2,1); }
-.citizen-card:hover img { transform: scale(1.035); }
-.citizen-shade { position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(0,0,0,.9)); }
-.citizen-copy { position: absolute; inset: auto 0 0; padding: 1.5rem; }
-.citizen-copy h3 { margin-top: .55rem; font-size: 2rem; font-weight: 500; letter-spacing: -.045em; }
-.citizen-copy p { margin-top: .35rem; font-size: .85rem; color: rgba(255,255,255,.55); }
 
 .transmission-frame {
   position: relative;
@@ -208,6 +182,8 @@ body {
     0 0 90px rgba(167, 255, 38, .05);
 }
 .transmission-frame video { display: block; width: 100%; aspect-ratio: 9/16; object-fit: cover; }
+.transmission-frame-wide { max-width: 920px; }
+.transmission-frame-wide video { aspect-ratio: 16/9; }
 .transmission-mark {
   position: absolute;
   left: 1rem;
@@ -360,8 +336,6 @@ body {
 @media (max-width: 767px) {
   .hero-film { object-position: 50% 50%; }
   .hero-shade { background: linear-gradient(180deg, rgba(0,0,0,.16), rgba(0,0,0,.38) 40%, rgba(0,0,0,.92)); }
-  .citizen-rail { grid-auto-columns: 82%; }
-  .citizen-card { min-height: 570px; }
   .editorial-card { min-height: 64svh; }
 }
 

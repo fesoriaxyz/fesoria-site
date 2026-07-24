@@ -22,14 +22,12 @@ export default function WorldCard({
   status,
   index,
 }: WorldCardProps) {
-  const artwork = index === 0 ? "/worlds/floating-city.svg" : image;
-
   return (
     <article className="world-panel group relative min-h-[78svh] overflow-hidden bg-[#0b0b0d]">
       <div
         className="world-image absolute inset-0 bg-cover bg-center transition duration-[1.4s] group-hover:scale-[1.025]"
         style={{
-          backgroundImage: `url(${artwork})`,
+          backgroundImage: `url(${image})`,
           backgroundPosition: imagePosition,
         }}
       />

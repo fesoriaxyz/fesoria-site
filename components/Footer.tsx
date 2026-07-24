@@ -33,7 +33,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="text-sm text-white/35">
-              © {new Date().getFullYear()} FESORIA. Every world has a festival.
+              © {new Date().getFullYear()} FESORIA. One universe. Infinite worlds.
             </p>
           </div>
         </div>

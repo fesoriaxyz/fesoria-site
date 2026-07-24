@@ -4,10 +4,10 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const links = [
-  { label: "Worlds", href: "/#worlds" },
-  { label: "Reimagined", href: "/#reimagined" },
-  { label: "Citizens", href: "/#citizens" },
-  { label: "Signals", href: "/#transmissions" },
+  { label: "Episodes", href: "/#episodes" },
+  { label: "Archives", href: "/#archives" },
+  { label: "Timeline", href: "/#timeline" },
+  { label: "Watch", href: "/#transmissions" },
 ];
 
 export default function Navbar() {

@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="hero-shell relative flex min-h-[100svh] items-end overflow-hidden px-5 pb-16 pt-32 sm:px-8 sm:pb-20 lg:px-12">
       <img
-        src="/worlds/floating-city.svg"
+        src="/worlds/floating-city-ep01.webp"
         alt="The Floating City above the clouds, powered by a glowing energy core"
         className="hero-film object-cover"
       />
@@ -33,7 +33,7 @@ export default function Hero() {
               <Play size={15} fill="currentColor" />
               Discover Episode 01
             </a>
-            <a href="#worlds" className="button-ghost flex items-center gap-2">
+            <a href="#episodes" className="button-ghost flex items-center gap-2">
               Explore episodes
               <ArrowUpRight
                 size={18}
@@ -45,7 +45,7 @@ export default function Hero() {
       </div>
 
       <a
-        href="#worlds"
+        href="#episodes"
         aria-label="Scroll to episodes"
         className="absolute bottom-7 right-7 z-10 hidden animate-bounce text-white/45 sm:block lg:right-12"
       >

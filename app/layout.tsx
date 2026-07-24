@@ -8,13 +8,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "FESORIA — Every world has a festival",
+  title: "FESORIA — One universe. Infinite worlds.",
   description:
-    "AI-generated festival universes. Enter FESORIA and explore worlds that never existed.",
+    "Discover cinematic episodes from an expanding universe of impossible cities, recovered signals and connected worlds.",
   metadataBase: new URL("https://fesoria.xyz"),
   openGraph: {
     title: "FESORIA",
-    description: "Every world has a festival.",
+    description: "One universe. Infinite worlds.",
+    images: ["/worlds/floating-city-ep01.webp"],
     url: "https://fesoria.xyz",
     siteName: "FESORIA",
     type: "website",
@@ -22,7 +23,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FESORIA",
-    description: "Every world has a festival.",
+    description: "One universe. Infinite worlds.",
+    images: ["/worlds/floating-city-ep01.webp"],
   },
 };
 

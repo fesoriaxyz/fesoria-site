@@ -11,7 +11,7 @@ const episodes = [
     era: "Above the clouds, the core awakens",
     description:
       "A civilization suspended above the clouds, powered by an ancient energy core that has begun to pulse again.",
-    image: "/worlds/atlantis.webp",
+    image: "/worlds/floating-city-ep01.webp",
     href: "#transmissions",
     status: "Online",
   },
@@ -22,6 +22,7 @@ const episodes = [
       "A neon megacity moving beyond permission, where one courier carries a signal capable of changing every world.",
     image: "/worlds/tokyo-2147-pirate.webp",
     imagePosition: "72% center",
+    href: "/worlds/tokyo-2147",
     status: "In production",
   },
   {
@@ -30,6 +31,7 @@ const episodes = [
     description:
       "Ancient architecture, living light and a submerged culture waiting to reconnect with the universe above.",
     image: "/worlds/atlantis.webp",
+    href: "/worlds/atlantis",
     status: "Concept",
   },
   {
@@ -64,7 +66,7 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <section id="worlds" className="px-3 py-24 sm:px-5 lg:py-32">
+      <section id="episodes" className="px-3 py-24 sm:px-5 lg:py-32">
         <Reveal className="mx-auto mb-16 max-w-[92rem] px-2 sm:px-3">
           <p className="eyebrow">Episodes</p>
           <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
@@ -85,7 +87,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="reimagined" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+      <section id="archives" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
         <div className="ambient-orb ambient-orb-left" />
         <Reveal className="mx-auto max-w-[92rem]">
           <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
@@ -105,7 +107,7 @@ export default function Home() {
           </div>
 
           <div className="mt-16 grid gap-4 md:grid-cols-2">
-            <article className="editorial-card editorial-atlantis">
+            <article className="editorial-card editorial-floating-city">
               <div className="editorial-overlay" />
               <div className="editorial-copy">
                 <span>ARCHIVE 001</span>
@@ -180,12 +182,12 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="transmission-frame">
+            <div className="transmission-frame transmission-frame-wide">
               <video
                 controls
                 playsInline
                 preload="metadata"
-                poster="/posters/atlantis-world-01.webp"
+                poster="/worlds/floating-city-ep01.webp"
                 aria-label="Watch Episode 01 — The Floating City"
               >
                 <source src="/videos/floating-city-ep01.mp4" type="video/mp4" />
