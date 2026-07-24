@@ -265,14 +265,6 @@ export default function Home() {
                   Follow Instagram <Instagram size={17} />
                 </a>
               </div>
-              <a
-                href="https://tiktok.com/@fesoriaxyz"
-                target="_blank"
-                rel="noreferrer"
-                className="text-link mt-6 inline-flex items-center gap-2"
-              >
-                Watch the latest transmission on TikTok <ArrowUpRight size={16} />
-              </a>
             </div>
           </div>
         </Reveal>

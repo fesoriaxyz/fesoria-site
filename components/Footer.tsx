@@ -1,7 +1,6 @@
 const socials = [
   ["X", "https://x.com/fesoriaxyz"],
   ["Instagram", "https://instagram.com/fesoriaxyz"],
-  ["TikTok", "https://tiktok.com/@fesoriaxyz"],
   ["YouTube", "https://youtube.com/@fesoriaxyz"],
   ["Telegram", "https://t.me/fesoriaxyz"],
 ];
