@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Neo Tokyo — Episode 02 | FESORIA",
   description:
     "Intercept the Tokyo 2147 pirate broadcast: magnetic bikes, stolen data and a city moving beyond permission.",
+  alternates: {
+    canonical: "/worlds/tokyo-2147",
+  },
   openGraph: {
     title: "Neo Tokyo — Episode 02 | FESORIA",
     description: "The future has no curfew.",
