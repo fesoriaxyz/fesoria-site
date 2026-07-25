@@ -119,7 +119,7 @@ export default function Home() {
               <div className="editorial-overlay" />
               <div className="editorial-copy">
                 <span>ARCHIVE 002</span>
-                <h3>Neo Tokyo — Pirate Broadcast</h3>
+                <h3>Neo Tokyo â€” Pirate Broadcast</h3>
                 <p>An illegal signal from a city moving beyond permission.</p>
               </div>
             </article>
@@ -177,21 +177,19 @@ export default function Home() {
                 above the clouds and the energy core awakening at its center.
               </p>
               <div className="mt-8 flex items-center gap-3 text-sm text-cyan-100/75">
-                <span className="live-dot" /> Episode online · EP01
+                <span className="live-dot" /> Episode online Â· EP01
               </div>
             </div>
 
             <div className="transmission-frame transmission-frame-wide">
-              <video
-                controls
-                playsInline
-                preload="metadata"
-                poster="/worlds/floating-city-ep01.webp"
-                aria-label="Watch Episode 01 — The Floating City"
-              >
-                <source src="/videos/floating-city-ep01.mp4" type="video/mp4" />
-                Your browser does not support the video element.
-              </video>
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/7mMqf1nTh_M?rel=0"
+                title="FESORIA â€” Echoes of a Forgotten World"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
               <div className="transmission-mark">
                 <Play size={15} fill="currentColor" /> Episode 01
               </div>
@@ -218,14 +216,14 @@ export default function Home() {
             </div>
 
             <div className="lg:order-2">
-              <p className="eyebrow">Episode 02 · In production</p>
+              <p className="eyebrow">Episode 02 Â· In production</p>
               <h2 className="section-title">Neo Tokyo was never meant to air.</h2>
               <p className="section-copy">
                 Stolen street footage reveals one courier, one data run and a
                 future moving faster than anyone can control.
               </p>
               <div className="mt-8 flex items-center gap-3 text-sm text-lime-100/75">
-                <span className="live-dot live-dot-tokyo" /> Production signal · EP02
+                <span className="live-dot live-dot-tokyo" /> Production signal Â· EP02
               </div>
             </div>
           </div>
@@ -274,3 +272,4 @@ export default function Home() {
     </main>
   );
 }
+
