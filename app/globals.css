@@ -184,6 +184,12 @@ body {
 .transmission-frame video { display: block; width: 100%; aspect-ratio: 9/16; object-fit: cover; }
 .transmission-frame-wide { max-width: 920px; }
 .transmission-frame-wide video { aspect-ratio: 16/9; }
+.transmission-frame iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+}
 .transmission-mark {
   position: absolute;
   left: 1rem;
@@ -344,3 +350,4 @@ body {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
