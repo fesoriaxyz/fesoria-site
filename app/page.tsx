@@ -168,8 +168,8 @@ export default function Home() {
 
       <section id="transmissions" className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
         <Reveal className="mx-auto max-w-[92rem]">
-          <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
-            <div>
+          <div className="space-y-12 lg:space-y-16">
+            <div className="max-w-4xl">
               <p className="eyebrow">Episode 01</p>
               <h2 className="section-title">The Floating City is online.</h2>
               <p className="section-copy">
@@ -181,7 +181,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="transmission-frame transmission-frame-wide">
+            <div className="transmission-frame transmission-frame-wide transmission-frame-feature">
               <iframe
                 src="https://www.youtube-nocookie.com/embed/7mMqf1nTh_M?rel=0"
                 title="FESORIA — Echoes of a Forgotten World"
