@@ -5,9 +5,9 @@ import { useState } from "react";
 
 const links = [
   { label: "Episodes", href: "/#episodes" },
-  { label: "Archives", href: "/#archives" },
   { label: "Timeline", href: "/#timeline" },
-  { label: "Watch", href: "/#transmissions" },
+  { label: "Four Worlds", href: "/#worlds" },
+  { label: "Next", href: "/#next-transmission" },
 ];
 
 export default function Navbar() {
