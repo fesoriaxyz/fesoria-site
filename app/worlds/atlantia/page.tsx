@@ -5,15 +5,15 @@ import Navbar from "@/components/Navbar";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Atlantia — Episode 03 | FESORIA",
+  title: "Atlantis — The Four Worlds | FESORIA",
   description:
-    "Enter Atlantia, a submerged civilization waiting to reconnect with the universe above.",
+    "Enter Atlantis, one of the four civilizations preserved inside the Archive.",
   alternates: {
     canonical: "/worlds/atlantia",
   },
   openGraph: {
-    title: "Atlantia — Episode 03 | FESORIA",
-    description: "A civilization beneath the surface. Signal pending.",
+    title: "Atlantis — The Four Worlds | FESORIA",
+    description: "A submerged civilization preserved inside the Archive.",
     images: ["/worlds/atlantia-ep03.webp"],
   },
 };
@@ -38,14 +38,14 @@ export default function AtlantiaPage() {
         <div className="world-detail-shade" />
         <div className="relative z-10 mx-auto w-full max-w-[92rem] px-6 pb-16 pt-40 sm:px-10 lg:px-14 lg:pb-24">
           <a
-            href="/#episodes"
+            href="/#worlds"
             className="mb-10 inline-flex items-center gap-2 text-sm text-white/65 transition hover:text-white"
           >
-            <ArrowLeft size={17} /> Return to episodes
+            <ArrowLeft size={17} /> Return to the four worlds
           </a>
-          <p className="eyebrow">Episode 03 · Concept</p>
+          <p className="eyebrow">World 02 · Archive record</p>
           <h1 className="text-[clamp(5rem,17vw,14rem)] font-medium leading-[.72] tracking-[-.075em]">
-            Atlantia
+            Atlantis
           </h1>
           <div className="mt-10 grid max-w-5xl gap-8 md:grid-cols-[1.15fr_.85fr] md:items-end">
             <p className="text-xl leading-8 text-white/74 sm:text-2xl">
@@ -53,7 +53,7 @@ export default function AtlantiaPage() {
               the universe above.
             </p>
             <div className="grid grid-cols-2 gap-5">
-              <div className="world-fact"><span>Episode</span>EP03</div>
+              <div className="world-fact"><span>Archive record</span>WORLD 02</div>
               <div className="world-fact"><span>Status</span>Concept</div>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function AtlantiaPage() {
               has remained dormant for centuries.
             </p>
             <p>
-              Atlantia is not the beginning of the story. It may be the place
+              Atlantis is not the beginning of the story. It may be the place
               where the connection between every FESORIA world is finally
               understood.
             </p>
@@ -100,10 +100,10 @@ export default function AtlantiaPage() {
         <Reveal className="mx-auto max-w-[92rem] text-center">
           <p className="eyebrow">Signal pending</p>
           <h2 className="mx-auto max-w-6xl text-[clamp(3.6rem,10vw,9rem)] font-medium leading-[.8] tracking-[-.07em]">
-            The surface will hear Atlantia again.
+            The surface will hear Atlantis again.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-white/55">
-            Join the transmission to know when Episode 03 begins to surface.
+            Its chapter remains encrypted, but the Archive has confirmed that the world survives.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
@@ -114,8 +114,8 @@ export default function AtlantiaPage() {
             >
               Join the signal <Send size={17} />
             </a>
-            <a href="/#episodes" className="text-link inline-flex items-center gap-2">
-              Explore every episode <ArrowUpRight size={17} />
+            <a href="/#worlds" className="text-link inline-flex items-center gap-2">
+              Explore the four worlds <ArrowUpRight size={17} />
             </a>
           </div>
         </Reveal>
