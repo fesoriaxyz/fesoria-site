@@ -8,7 +8,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "FESORIA — One universe. Infinite worlds.",
+  title: "FESORIA — Four worlds. One signal.",
   description:
     "Follow The First Signal and The Archive as four connected worlds emerge inside the FESORIA cinematic universe.",
   metadataBase: new URL("https://fesoria.xyz"),
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "FESORIA",
-    description: "One universe. Infinite worlds.",
+    description: "Four worlds. One signal. Follow The First Signal and The Archive.",
     images: ["/worlds/floating-city-ep01.webp"],
     url: "https://fesoria.xyz",
     siteName: "FESORIA",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FESORIA",
-    description: "One universe. Infinite worlds.",
+    description: "Four worlds. One signal. Follow The First Signal and The Archive.",
     images: ["/worlds/floating-city-ep01.webp"],
   },
 };
