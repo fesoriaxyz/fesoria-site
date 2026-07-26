@@ -14,27 +14,27 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-[92rem]">
         <div className="hero-kicker mb-7 flex items-center gap-3 text-[0.66rem] font-medium uppercase tracking-[0.28em] text-white/60">
           <span className="live-dot" />
-          Episode 01 · The Floating City online
+          Chapter II · The Archive online
         </div>
 
         <h1 className="max-w-[1120px] text-[clamp(4.25rem,12.5vw,11rem)] font-medium leading-[0.76] tracking-[-0.078em]">
-          One universe.
-          <span className="block text-white/48">Infinite worlds.</span>
+          Four worlds.
+          <span className="block text-white/48">One signal.</span>
         </h1>
 
         <div className="mt-9 flex max-w-4xl flex-col justify-between gap-8 border-t border-white/20 pt-7 md:flex-row md:items-end">
           <p className="max-w-xl text-lg leading-8 text-white/72 sm:text-xl">
-            Discover cinematic episodes from a universe where every world has
-            its own history, architecture and soundtrack.
+            The archive is open. Discover the four civilizations connected by
+            a transmission older than memory.
           </p>
 
           <div className="flex flex-wrap gap-3">
-            <a href="#transmissions" className="button-primary group flex items-center gap-2">
+            <a href="#chapter-two" className="button-primary group flex items-center gap-2">
               <Play size={15} fill="currentColor" />
-              Discover Episode 01
+              Watch Chapter II
             </a>
-            <a href="#episodes" className="button-ghost flex items-center gap-2">
-              Explore episodes
+            <a href="#worlds" className="button-ghost flex items-center gap-2">
+              Explore the worlds
               <ArrowUpRight
                 size={18}
                 className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
