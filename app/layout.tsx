@@ -10,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "FESORIA — One universe. Infinite worlds.",
   description:
-    "Discover cinematic episodes from an expanding universe of impossible cities, recovered signals and connected worlds.",
+    "Follow The First Signal and The Archive as four connected worlds emerge inside the FESORIA cinematic universe.",
   metadataBase: new URL("https://fesoria.xyz"),
   alternates: {
     canonical: "/",
