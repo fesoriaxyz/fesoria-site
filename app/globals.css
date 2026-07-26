@@ -188,6 +188,9 @@ body {
   width: 100%;
   max-width: none;
 }
+.transmission-frame-archive {
+  box-shadow: 0 50px 150px rgba(187, 125, 255, .1);
+}
 .transmission-frame iframe {
   display: block;
   width: 100%;
@@ -209,6 +212,84 @@ body {
   letter-spacing: .14em;
   text-transform: uppercase;
   backdrop-filter: blur(16px);
+}
+
+.episode-card {
+  height: 100%;
+  border-top: 1px solid rgba(255,255,255,.14);
+  padding-top: 1.25rem;
+}
+.episode-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  font-size: .65rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.48);
+}
+.episode-complete { color: rgba(103,232,249,.8); }
+.episode-card .transmission-frame { width: 100%; max-width: none; border-radius: 1.5rem; }
+.episode-card h3 {
+  margin-top: 1.8rem;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.055em;
+}
+.episode-card > p {
+  max-width: 34rem;
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,.56);
+}
+
+.next-transmission {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  min-height: 68svh;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: clamp(1.6rem, 4vw, 3rem);
+  background:
+    radial-gradient(circle at 50% 48%, rgba(68,205,255,.12), transparent 24%),
+    linear-gradient(150deg, rgba(10,26,38,.72), rgba(4,4,5,.95) 55%, rgba(20,7,27,.8));
+}
+.next-transmission::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(circle, black, transparent 70%);
+}
+.next-transmission-signal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(48vw, 34rem);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(103,232,249,.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5rem rgba(103,232,249,.018), 0 0 100px rgba(103,232,249,.08);
+}
+.next-transmission h2 {
+  font-size: clamp(4rem, 11vw, 10rem);
+  font-weight: 500;
+  line-height: .82;
+  letter-spacing: -.075em;
+}
+.next-transmission p:last-child {
+  margin-top: 1.5rem;
+  font-size: .75rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
 }
 
 .ambient-orb { position: absolute; pointer-events: none; border-radius: 999px; filter: blur(110px); opacity: .15; }
