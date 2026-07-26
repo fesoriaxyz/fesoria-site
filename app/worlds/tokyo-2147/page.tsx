@@ -5,14 +5,14 @@ import Navbar from "@/components/Navbar";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Neo Tokyo — Episode 02 | FESORIA",
+  title: "Neo Tokyo — The Four Worlds | FESORIA",
   description:
     "Intercept the Tokyo 2147 pirate broadcast: magnetic bikes, stolen data and a city moving beyond permission.",
   alternates: {
     canonical: "/worlds/tokyo-2147",
   },
   openGraph: {
-    title: "Neo Tokyo — Episode 02 | FESORIA",
+    title: "Neo Tokyo — The Four Worlds | FESORIA",
     description: "The future has no curfew.",
     images: ["/worlds/neo-tokyo-ep02.webp"],
   },
@@ -38,12 +38,12 @@ export default function TokyoPage() {
         <div className="tokyo-grid" />
         <div className="relative z-10 mx-auto w-full max-w-[92rem] px-6 pb-16 pt-40 sm:px-10 lg:px-14 lg:pb-24">
           <a
-            href="/#episodes"
+            href="/#worlds"
             className="mb-10 inline-flex items-center gap-2 text-sm text-white/65 transition hover:text-white"
           >
-            <ArrowLeft size={17} /> Return to episodes
+            <ArrowLeft size={17} /> Return to the four worlds
           </a>
-          <p className="eyebrow tokyo-code">Episode 02 · In production · Unlicensed signal</p>
+          <p className="eyebrow tokyo-code">World 03 · Archive record · Unlicensed signal</p>
           <h1 className="max-w-6xl text-[clamp(4.8rem,15vw,13rem)] font-medium leading-[.72] tracking-[-.075em]">
             Tokyo <span className="tokyo-red">2147</span>
           </h1>
@@ -133,8 +133,8 @@ export default function TokyoPage() {
             >
               Enter the pirate channel <Send size={17} />
             </a>
-            <a href="/#episodes" className="text-link inline-flex items-center gap-2">
-              Explore every episode <ArrowUpRight size={17} />
+            <a href="/#worlds" className="text-link inline-flex items-center gap-2">
+              Explore the four worlds <ArrowUpRight size={17} />
             </a>
           </div>
         </Reveal>
