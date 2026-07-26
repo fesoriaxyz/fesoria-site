@@ -36,7 +36,7 @@ export default function WorldCard({
       <div className="relative flex min-h-[78svh] flex-col justify-between p-7 sm:p-10 lg:p-14">
         <div className="flex items-center justify-between gap-4">
           <span className="text-[0.65rem] tracking-[0.3em] text-white/60">
-            EPISODE {String(index + 1).padStart(2, "0")}
+            WORLD {String(index + 1).padStart(2, "0")}
           </span>
           <span className="rounded-full border border-white/20 bg-black/25 px-3 py-1.5 text-[0.62rem] font-medium uppercase tracking-[0.22em] text-white/75 backdrop-blur-md">
             {status}
@@ -53,7 +53,7 @@ export default function WorldCard({
           </p>
           {href && (
             <Link href={href} className="button-ghost mt-7 inline-flex items-center gap-2">
-              Discover episode <ArrowUpRight size={17} />
+              Explore world <ArrowUpRight size={17} />
             </Link>
           )}
         </div>
