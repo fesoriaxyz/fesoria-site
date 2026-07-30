@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.7 seconds
-Output:
 import { Instagram, Play, Send } from "lucide-react";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
