@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-[92rem]">
         <div className="hero-kicker mb-7 flex items-center gap-3 text-[0.66rem] font-medium uppercase tracking-[0.28em] text-white/60">
           <span className="live-dot" />
-          Chapter II · The Archive online
+          Chapter III · The Guardian online
         </div>
 
         <h1 className="max-w-[1120px] text-[clamp(4.25rem,12.5vw,11rem)] font-medium leading-[0.76] tracking-[-0.078em]">
@@ -29,9 +29,9 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-3">
-            <a href="#chapter-two" className="button-primary group flex items-center gap-2">
+            <a href="#chapter-three" className="button-primary group flex items-center gap-2">
               <Play size={15} fill="currentColor" />
-              Watch Chapter II
+              Watch Chapter III
             </a>
             <a href="#worlds" className="button-ghost flex items-center gap-2">
               Explore the worlds
