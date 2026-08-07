@@ -16,12 +16,13 @@ const timeline = [
   { code: "CHAPTER I", title: "The First Signal", status: "Complete", complete: true },
   { code: "CHAPTER II", title: "The Archive", status: "Complete", complete: true },
   { code: "CHAPTER III", title: "The Guardian", status: "Complete", complete: true },
-  { code: "CHAPTER IV", title: "Coming Soon", status: "Unknown", complete: false },
+  { code: "CHAPTER IV", title: "The Lost World", status: "Complete", complete: true },
   { code: "CHAPTER V", title: "Coming Soon", status: "Unknown", complete: false },
 ] as const;
 
 const chapterTwoEmbed = "https://www.youtube-nocookie.com/embed/fFAkYf4HSgY?rel=0";
 const chapterThreeEmbed = "https://www.youtube-nocookie.com/embed/OZ7NpdlVMn4?rel=0";
+const chapterFourEmbed = "https://www.youtube-nocookie.com/embed/nlfa41nKSMk?rel=0";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
           <p className="eyebrow">Episodes</p>
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <h2 className="section-title">The transmission has begun.</h2>
-            <p className="section-copy lg:mb-2">Three chapters. One signal crossing worlds. Watch the story unfold in chronological order.</p>
+            <p className="section-copy lg:mb-2">Four chapters. One signal crossing worlds. Watch the story unfold in chronological order.</p>
           </div>
         </Reveal>
         <div className="mx-auto mt-16 grid max-w-[92rem] gap-16 lg:grid-cols-2">
@@ -71,6 +72,17 @@ export default function Home() {
               <p>An ancient protector reveals a missing world â€” and prepares Serephina for the journey ahead.</p>
             </article>
           </Reveal>
+          <Reveal>
+            <article id="chapter-four" className="episode-card">
+              <div className="episode-meta"><span>Chapter IV</span><span className="episode-complete">Complete</span></div>
+              <div className="transmission-frame transmission-frame-wide transmission-frame-archive">
+                <iframe src={chapterFourEmbed} title="FESORIA â€” Chapter IV: The Lost World" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+                <div className="transmission-mark"><Play size={15} fill="currentColor" /> Chapter IV</div>
+              </div>
+              <h3>The Lost World</h3>
+              <p>A forgotten civilization is revealed â€” and its destruction may not have been an accident.</p>
+            </article>
+          </Reveal>
         </div>
       </section>
 
@@ -78,7 +90,7 @@ export default function Home() {
         <Reveal className="mx-auto max-w-[92rem]">
           <div className="grid gap-8 md:grid-cols-2 md:items-end">
             <div><p className="eyebrow">Timeline</p><h2 className="section-title">Every chapter moves the signal closer.</h2></div>
-            <p className="section-copy md:justify-self-end">The first three transmissions have been recovered. What follows remains hidden beyond the archive.</p>
+            <p className="section-copy md:justify-self-end">The first four transmissions have been recovered. What follows remains hidden beyond the archive.</p>
           </div>
           <div className="mt-16 border-t border-white/12">
             {timeline.map((chapter) => (
@@ -110,7 +122,7 @@ export default function Home() {
       <section id="next-transmission" className="px-5 py-24 sm:px-8 lg:px-12 lg:py-36">
         <Reveal className="next-transmission mx-auto max-w-[92rem]">
           <div className="next-transmission-signal" />
-          <div className="relative z-10 text-center"><p className="eyebrow">Next Transmission</p><h2>Coming Soon</h2><p>Chapter IV remains encrypted.</p></div>
+          <div className="relative z-10 text-center"><p className="eyebrow">Next Transmission</p><h2>Coming Soon</h2><p>Chapter V remains encrypted.</p></div>
         </Reveal>
       </section>
 
