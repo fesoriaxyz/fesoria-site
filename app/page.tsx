@@ -23,7 +23,7 @@ export default function Home() {
         <nav aria-label="Navigare principală" className="flex gap-5 text-sm text-[#cecade] sm:gap-8">
           <a href="#services" className="hover:text-white">Aplicație</a>
           <a href="#process" className="hover:text-white">Despre</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
+
         </nav>
       </header>
       <main className="mx-auto max-w-7xl px-6 sm:px-10">
@@ -67,11 +67,6 @@ export default function Home() {
         <section id="process" className="grid gap-6 border-y border-white/15 py-16 md:grid-cols-2">
           <h2 className="text-4xl font-semibold tracking-tight">Despre Fesoria</h2>
           <p className="max-w-xl text-lg leading-relaxed text-[#cecade]">Fesoria dezvoltă aplicații mobile pentru nevoi de zi cu zi. Începem cu Alerte Utilități și vom prezenta aici proiectele viitoare.</p>
-        </section>
-        <section id="contact" className="py-20">
-          <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">Contact</h2>
-          <p className="mb-7 mt-4 text-[#cecade]">Pentru întrebări sau sugestii despre Alerte Utilități, scrie-ne pe Instagram.</p>
-          <a href="https://instagram.com/fesoriaxyz" className="inline-block rounded-full bg-[#d8c9ff] px-6 py-3 font-semibold text-[#171125] hover:bg-white">Scrie-ne pe Instagram</a>
         </section>
       </main>
       <footer className="mx-auto max-w-7xl border-t border-white/15 px-6 py-7 text-sm text-[#cecade] sm:px-10">FESORIA · Aplicații mobile</footer>
