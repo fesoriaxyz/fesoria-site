@@ -5,9 +5,9 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/worlds/atlantis",
-        destination: "/worlds/atlantia",
-        permanent: true,
+        source: "/worlds/:path*",
+        destination: "/",
+        permanent: false,
       },
     ];
   },
